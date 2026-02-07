@@ -24,22 +24,22 @@ const { fontFamily: interFont } = loadInter("normal", {
 
 const FEATURES = [
   {
-    icon: "https://api.iconify.design/ph/book-open-text-bold.svg?color=%23F56B3D&width=40",
+    icon: "https://api.iconify.design/ph/book-open-text-bold.svg?color=%2306D6A0&width=40",
     title: "Course Sales",
     desc: "Launch digital courses in minutes with AI-powered content generation",
-    accent: "#F56B3D",
+    accent: "#06D6A0",
   },
   {
-    icon: "https://api.iconify.design/ph/megaphone-bold.svg?color=%2310B981&width=40",
+    icon: "https://api.iconify.design/ph/megaphone-bold.svg?color=%23EF476F&width=40",
     title: "Marketing Flows",
     desc: "Automated email campaigns and landing pages that convert",
-    accent: "#10B981",
+    accent: "#EF476F",
   },
   {
-    icon: "https://api.iconify.design/ph/credit-card-bold.svg?color=%238B5CF6&width=40",
+    icon: "https://api.iconify.design/ph/credit-card-bold.svg?color=%237B61FF&width=40",
     title: "Payment Integration",
     desc: "Accept payments instantly — Stripe, cards, and more built-in",
-    accent: "#8B5CF6",
+    accent: "#7B61FF",
   },
 ];
 
@@ -50,23 +50,23 @@ export const FeaturesScene: React.FC = () => {
   return (
     <AbsoluteFill>
       {/* Ambient decorative shapes */}
-      <div style={{ position: "absolute", top: 80, right: 100, opacity: 0.08 }}>
+      <div style={{ position: "absolute", top: 80, right: 100, opacity: 0.1 }}>
         <ShapeAnimation
           shape="hexagon"
           animation="rotate"
           size={180}
-          color="#F56B3D"
+          color="#06D6A0"
           speed={0.15}
         />
       </div>
       <div
-        style={{ position: "absolute", bottom: 60, left: 80, opacity: 0.06 }}
+        style={{ position: "absolute", bottom: 60, left: 80, opacity: 0.08 }}
       >
         <ShapeAnimation
           shape="ring"
           animation="breathe"
           size={140}
-          color="#8B5CF6"
+          color="#EF476F"
           strokeWidth={3}
           speed={0.5}
         />
@@ -163,7 +163,7 @@ export const FeaturesScene: React.FC = () => {
                 padding: "0",
                 borderRadius: 20,
                 backgroundColor: "rgba(255,255,255,0.03)",
-                border: `1px solid ${feat.accent}18`,
+                border: `1px solid ${feat.accent}22`,
                 overflow: "hidden",
                 opacity: cardOpacity,
                 transform: `translateX(${cardX}px) translateY(${floatY}px) scale(${cardScale})`,
@@ -188,13 +188,13 @@ export const FeaturesScene: React.FC = () => {
                 }}
               >
                 {/* Icon */}
-                <Glow color={feat.accent} intensity={12}>
+                <Glow color={feat.accent} intensity={14}>
                   <div
                     style={{
                       width: 68,
                       height: 68,
                       borderRadius: 18,
-                      backgroundColor: `${feat.accent}15`,
+                      backgroundColor: `${feat.accent}18`,
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",

@@ -57,19 +57,19 @@ export const CTAScene: React.FC = () => {
       {/* Celebratory particles */}
       <Particles
         type="sparks"
-        count={30}
-        colors={["#F56B3D", "#FFB347", "#FAFAFA", "#8B5CF6"]}
+        count={35}
+        colors={["#06D6A0", "#EF476F", "#7B61FF", "#FFD166", "#FAFAFA"]}
         speed={0.5}
         seed="cta-sparks"
       />
 
-      {/* Central glow */}
+      {/* Central glow — vibrant multi-color */}
       <div
         style={{
           position: "absolute",
           inset: 0,
           background:
-            "radial-gradient(circle at 50% 45%, rgba(245,107,61,0.12), transparent 60%)",
+            "radial-gradient(circle at 50% 40%, rgba(6,214,160,0.14), transparent 50%), radial-gradient(circle at 60% 55%, rgba(123,97,255,0.08), transparent 45%)",
         }}
       />
 
@@ -153,7 +153,7 @@ export const CTAScene: React.FC = () => {
         </TextAnimation>
       </div>
 
-      {/* CTA Button */}
+      {/* CTA Button — vibrant gradient */}
       <div
         style={{
           position: "absolute",
@@ -165,8 +165,8 @@ export const CTAScene: React.FC = () => {
         }}
       >
         <Glow
-          color="#F56B3D"
-          intensity={20}
+          color="#06D6A0"
+          intensity={22}
           pulsate
           pulseDuration={2}
           pulseMin={0.5}
@@ -178,11 +178,11 @@ export const CTAScene: React.FC = () => {
               gap: 12,
               padding: "18px 44px",
               borderRadius: 9999,
-              background: "linear-gradient(135deg, #F56B3D, #E05525)",
+              background: "linear-gradient(135deg, #06D6A0, #7B61FF)",
               opacity: btnOpacity,
               transform: `scale(${btnScale * pulseScale})`,
               boxShadow:
-                "0 0 30px rgba(245,107,61,0.4), 0 8px 30px rgba(0,0,0,0.3)",
+                "0 0 30px rgba(6,214,160,0.35), 0 0 60px rgba(123,97,255,0.2), 0 8px 30px rgba(0,0,0,0.3)",
             }}
           >
             <Img
@@ -222,7 +222,10 @@ export const CTAScene: React.FC = () => {
             fontFamily: interFont,
             fontSize: 26,
             fontWeight: 500,
-            color: "#F56B3D",
+            background: "linear-gradient(90deg, #06D6A0, #7B61FF)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            backgroundClip: "text",
             letterSpacing: "0.03em",
           }}
         >

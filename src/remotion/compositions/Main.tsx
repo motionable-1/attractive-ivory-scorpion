@@ -40,7 +40,7 @@ export const Main: React.FC = () => {
         <Artifact content={Artifact.Thumbnail} filename="thumbnail.jpeg" />
       )}
 
-      <AbsoluteFill style={{ backgroundColor: "#09090B" }}>
+      <AbsoluteFill style={{ backgroundColor: "#0A0A12" }}>
         {/* Persistent animated background */}
         <Background />
 

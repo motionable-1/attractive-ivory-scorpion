@@ -78,8 +78,8 @@ export const HeroScene: React.FC = () => {
       >
         <Badge
           badgeStyle="glass"
-          color="#F56B3D"
-          textColor="#F56B3D"
+          color="#06D6A0"
+          textColor="#06D6A0"
           animation="scaleIn"
           delay={0.1}
           fontSize={18}
@@ -89,7 +89,7 @@ export const HeroScene: React.FC = () => {
           style={{ fontFamily: interFont, fontWeight: 500 }}
         >
           <Img
-            src="https://api.iconify.design/ph/rocket-launch-fill.svg?color=%23F56B3D&width=20"
+            src="https://api.iconify.design/ph/rocket-launch-fill.svg?color=%2306D6A0&width=20"
             style={{ width: 20, height: 20 }}
           />
           AI-Powered Monetization
@@ -112,8 +112,8 @@ export const HeroScene: React.FC = () => {
         }}
       >
         <Glow
-          color="#F56B3D"
-          intensity={15}
+          color="#06D6A0"
+          intensity={18}
           pulsate
           pulseDuration={3}
           pulseMin={0.4}
@@ -128,10 +128,22 @@ export const HeroScene: React.FC = () => {
             }}
           >
             super
-            <span style={{ color: "#F56B3D" }}>links</span>
             <span
               style={{
-                color: "#F56B3D",
+                background: "linear-gradient(135deg, #06D6A0, #7B61FF)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+              }}
+            >
+              links
+            </span>
+            <span
+              style={{
+                background: "linear-gradient(135deg, #EF476F, #FFD166)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
                 display: "inline-block",
                 transform: `scale(${dotScale})`,
                 transformOrigin: "bottom center",
@@ -243,9 +255,9 @@ export const HeroScene: React.FC = () => {
             height: 340,
             borderRadius: 16,
             overflow: "hidden",
-            border: "1px solid rgba(245,107,61,0.15)",
+            border: "1px solid rgba(6,214,160,0.2)",
             boxShadow:
-              "0 20px 60px rgba(0,0,0,0.5), 0 0 40px rgba(245,107,61,0.1)",
+              "0 20px 60px rgba(0,0,0,0.5), 0 0 40px rgba(6,214,160,0.12), 0 0 80px rgba(123,97,255,0.06)",
           }}
         >
           <Img

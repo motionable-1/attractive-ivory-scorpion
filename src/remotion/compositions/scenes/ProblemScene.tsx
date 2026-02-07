@@ -22,16 +22,19 @@ const { fontFamily: interFont } = loadInter("normal", {
 
 const PAIN_POINTS = [
   {
-    icon: "https://api.iconify.design/ph/clock-countdown-bold.svg?color=%23F56B3D&width=36",
+    icon: "https://api.iconify.design/ph/clock-countdown-bold.svg?color=%23EF476F&width=36",
     text: "Hours wasted on tech setup",
+    accent: "#EF476F",
   },
   {
-    icon: "https://api.iconify.design/ph/puzzle-piece-bold.svg?color=%23F56B3D&width=36",
+    icon: "https://api.iconify.design/ph/puzzle-piece-bold.svg?color=%237B61FF&width=36",
     text: "Stitching tools together",
+    accent: "#7B61FF",
   },
   {
-    icon: "https://api.iconify.design/ph/currency-dollar-bold.svg?color=%23F56B3D&width=36",
+    icon: "https://api.iconify.design/ph/currency-dollar-bold.svg?color=%23FFD166&width=36",
     text: "Revenue left on the table",
+    accent: "#FFD166",
   },
 ];
 
@@ -120,7 +123,7 @@ export const ProblemScene: React.FC = () => {
                 padding: "36px 28px",
                 borderRadius: 20,
                 backgroundColor: "rgba(255,255,255,0.04)",
-                border: "1px solid rgba(245,107,61,0.12)",
+                border: `1px solid ${point.accent}20`,
                 backdropFilter: "blur(8px)",
                 display: "flex",
                 flexDirection: "column",
@@ -135,7 +138,7 @@ export const ProblemScene: React.FC = () => {
                   width: 64,
                   height: 64,
                   borderRadius: 16,
-                  backgroundColor: "rgba(245,107,61,0.1)",
+                  backgroundColor: `${point.accent}15`,
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
@@ -177,7 +180,7 @@ export const ProblemScene: React.FC = () => {
             fontFamily: outfitFont,
             fontSize: 32,
             fontWeight: 600,
-            color: "#F56B3D",
+            color: "#06D6A0",
             textAlign: "center",
           }}
           createTimeline={({ textRef, tl, SplitText }) => {

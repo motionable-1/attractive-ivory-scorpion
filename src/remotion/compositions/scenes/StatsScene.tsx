@@ -15,14 +15,14 @@ const { fontFamily: interFont } = loadInter("normal", {
 });
 
 const STATS = [
-  { value: 10000, suffix: "+", label: "Creators Launched", color: "#F56B3D" },
-  { value: 99, suffix: "%", label: "Uptime Guarantee", color: "#10B981" },
+  { value: 10000, suffix: "+", label: "Creators Launched", color: "#06D6A0" },
+  { value: 99, suffix: "%", label: "Uptime Guarantee", color: "#EF476F" },
   {
     value: 0,
     prefix: "$",
     suffix: " Fee",
     label: "Zero Platform Fees",
-    color: "#8B5CF6",
+    color: "#7B61FF",
   },
 ];
 
@@ -31,23 +31,23 @@ export const StatsScene: React.FC = () => {
   return (
     <AbsoluteFill>
       {/* Decorative elements */}
-      <div style={{ position: "absolute", top: 50, left: 120, opacity: 0.05 }}>
+      <div style={{ position: "absolute", top: 50, left: 120, opacity: 0.07 }}>
         <ShapeAnimation
           shape="star"
           animation="rotate"
           size={200}
-          color="#F56B3D"
+          color="#FFD166"
           speed={0.1}
         />
       </div>
       <div
-        style={{ position: "absolute", bottom: 50, right: 100, opacity: 0.04 }}
+        style={{ position: "absolute", bottom: 50, right: 100, opacity: 0.06 }}
       >
         <ShapeAnimation
           shape="diamond"
           animation="breathe"
           size={150}
-          color="#10B981"
+          color="#06D6A0"
           speed={0.3}
         />
       </div>
@@ -149,7 +149,7 @@ export const StatsScene: React.FC = () => {
                   fontWeight: 800,
                   color: stat.color,
                   letterSpacing: "-0.02em",
-                  textShadow: `0 0 30px ${stat.color}40`,
+                  textShadow: `0 0 35px ${stat.color}50`,
                 }}
               >
                 {displayValue}
@@ -178,7 +178,7 @@ export const StatsScene: React.FC = () => {
                   height: 3,
                   borderRadius: 2,
                   backgroundColor: stat.color,
-                  opacity: 0.6,
+                  opacity: 0.7,
                 }}
               />
             </div>
