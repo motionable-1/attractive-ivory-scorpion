@@ -23,7 +23,10 @@
     "@types/react": "^19.2.9",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^4.3.4",
+    "css-loader": "^7.1.2",
     "postcss": "^8.5.0",
+    "postcss-loader": "^8.1.1",
+    "style-loader": "^4.0.0",
     "tailwindcss": "^4.1.11",
     "typescript": "5.8.2",
     "vite": "^6.0.7"
