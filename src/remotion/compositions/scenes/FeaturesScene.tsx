@@ -51,14 +51,38 @@ export const FeaturesScene: React.FC = () => {
     <AbsoluteFill>
       {/* Ambient decorative shapes */}
       <div style={{ position: "absolute", top: 80, right: 100, opacity: 0.08 }}>
-        <ShapeAnimation shape="hexagon" animation="rotate" size={180} color="#F56B3D" speed={0.15} />
+        <ShapeAnimation
+          shape="hexagon"
+          animation="rotate"
+          size={180}
+          color="#F56B3D"
+          speed={0.15}
+        />
       </div>
-      <div style={{ position: "absolute", bottom: 60, left: 80, opacity: 0.06 }}>
-        <ShapeAnimation shape="ring" animation="breathe" size={140} color="#8B5CF6" strokeWidth={3} speed={0.5} />
+      <div
+        style={{ position: "absolute", bottom: 60, left: 80, opacity: 0.06 }}
+      >
+        <ShapeAnimation
+          shape="ring"
+          animation="breathe"
+          size={140}
+          color="#8B5CF6"
+          strokeWidth={3}
+          speed={0.5}
+        />
       </div>
 
       {/* Section headline */}
-      <div style={{ position: "absolute", top: 90, left: 0, right: 0, display: "flex", justifyContent: "center" }}>
+      <div
+        style={{
+          position: "absolute",
+          top: 90,
+          left: 0,
+          right: 0,
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
         <TextAnimation
           startFrom={5}
           style={{
@@ -120,11 +144,16 @@ export const FeaturesScene: React.FC = () => {
           const floatY = Math.sin((frame / fps) * 1.2 + i * 1.5) * 4;
 
           // Glow line at top
-          const glowWidth = interpolate(frame, [delay + 10, delay + 30], [0, 100], {
-            extrapolateLeft: "clamp",
-            extrapolateRight: "clamp",
-            easing: Easing.out(Easing.cubic),
-          });
+          const glowWidth = interpolate(
+            frame,
+            [delay + 10, delay + 30],
+            [0, 100],
+            {
+              extrapolateLeft: "clamp",
+              extrapolateRight: "clamp",
+              easing: Easing.out(Easing.cubic),
+            },
+          );
 
           return (
             <div
@@ -150,7 +179,14 @@ export const FeaturesScene: React.FC = () => {
                 }}
               />
 
-              <div style={{ padding: "32px 28px", display: "flex", flexDirection: "column", gap: 18 }}>
+              <div
+                style={{
+                  padding: "32px 28px",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 18,
+                }}
+              >
                 {/* Icon */}
                 <Glow color={feat.accent} intensity={12}>
                   <div

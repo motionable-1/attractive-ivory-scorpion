@@ -42,7 +42,16 @@ export const ProblemScene: React.FC = () => {
   return (
     <AbsoluteFill>
       {/* Headline */}
-      <div style={{ position: "absolute", top: 140, left: 0, right: 0, display: "flex", justifyContent: "center" }}>
+      <div
+        style={{
+          position: "absolute",
+          top: 140,
+          left: 0,
+          right: 0,
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
         <TextAnimation
           startFrom={5}
           style={{
@@ -152,7 +161,16 @@ export const ProblemScene: React.FC = () => {
       </div>
 
       {/* Bottom message */}
-      <div style={{ position: "absolute", bottom: 120, left: 0, right: 0, display: "flex", justifyContent: "center" }}>
+      <div
+        style={{
+          position: "absolute",
+          bottom: 120,
+          left: 0,
+          right: 0,
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
         <TextAnimation
           startFrom={50}
           style={{
@@ -174,7 +192,7 @@ export const ProblemScene: React.FC = () => {
             return tl;
           }}
         >
-          There&apos;s a better way.
+          {"There's a better way."}
         </TextAnimation>
       </div>
     </AbsoluteFill>

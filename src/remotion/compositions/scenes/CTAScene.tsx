@@ -68,12 +68,22 @@ export const CTAScene: React.FC = () => {
         style={{
           position: "absolute",
           inset: 0,
-          background: "radial-gradient(circle at 50% 45%, rgba(245,107,61,0.12), transparent 60%)",
+          background:
+            "radial-gradient(circle at 50% 45%, rgba(245,107,61,0.12), transparent 60%)",
         }}
       />
 
       {/* Main CTA headline */}
-      <div style={{ position: "absolute", top: 180, left: 0, right: 0, display: "flex", justifyContent: "center" }}>
+      <div
+        style={{
+          position: "absolute",
+          top: 180,
+          left: 0,
+          right: 0,
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
         <TextAnimation
           startFrom={5}
           style={{
@@ -106,7 +116,16 @@ export const CTAScene: React.FC = () => {
       </div>
 
       {/* Subtitle */}
-      <div style={{ position: "absolute", top: 320, left: 0, right: 0, display: "flex", justifyContent: "center" }}>
+      <div
+        style={{
+          position: "absolute",
+          top: 320,
+          left: 0,
+          right: 0,
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
         <TextAnimation
           startFrom={22}
           style={{
@@ -145,7 +164,13 @@ export const CTAScene: React.FC = () => {
           justifyContent: "center",
         }}
       >
-        <Glow color="#F56B3D" intensity={20} pulsate pulseDuration={2} pulseMin={0.5}>
+        <Glow
+          color="#F56B3D"
+          intensity={20}
+          pulsate
+          pulseDuration={2}
+          pulseMin={0.5}
+        >
           <div
             style={{
               display: "flex",
@@ -156,7 +181,8 @@ export const CTAScene: React.FC = () => {
               background: "linear-gradient(135deg, #F56B3D, #E05525)",
               opacity: btnOpacity,
               transform: `scale(${btnScale * pulseScale})`,
-              boxShadow: "0 0 30px rgba(245,107,61,0.4), 0 8px 30px rgba(0,0,0,0.3)",
+              boxShadow:
+                "0 0 30px rgba(245,107,61,0.4), 0 8px 30px rgba(0,0,0,0.3)",
             }}
           >
             <Img

@@ -55,7 +55,13 @@ export const Background: React.FC = () => {
       />
 
       {/* Film grain */}
-      <Noise type="subtle" intensity={0.15} speed={0.8} opacity={0.3} blend="overlay" />
+      <Noise
+        type="subtle"
+        intensity={0.15}
+        speed={0.8}
+        opacity={0.3}
+        blend="overlay"
+      />
     </AbsoluteFill>
   );
 };

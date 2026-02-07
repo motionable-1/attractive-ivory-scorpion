@@ -1,13 +1,6 @@
 import React from "react";
-import {
-  AbsoluteFill,
-  useCurrentFrame,
-  useVideoConfig,
-  interpolate,
-  Easing,
-} from "remotion";
+import { AbsoluteFill, useCurrentFrame, interpolate, Easing } from "remotion";
 import { TextAnimation } from "../../library/components/text/TextAnimation";
-import { Counter } from "../../library/components/text/Counter";
 import { ShapeAnimation } from "../../library/components/effects/ShapeAnimation";
 import { loadFont as loadOutfit } from "@remotion/google-fonts/Outfit";
 import { loadFont as loadInter } from "@remotion/google-fonts/Inter";
@@ -24,25 +17,52 @@ const { fontFamily: interFont } = loadInter("normal", {
 const STATS = [
   { value: 10000, suffix: "+", label: "Creators Launched", color: "#F56B3D" },
   { value: 99, suffix: "%", label: "Uptime Guarantee", color: "#10B981" },
-  { value: 0, prefix: "$", suffix: " Fee", label: "Zero Platform Fees", color: "#8B5CF6" },
+  {
+    value: 0,
+    prefix: "$",
+    suffix: " Fee",
+    label: "Zero Platform Fees",
+    color: "#8B5CF6",
+  },
 ];
 
 export const StatsScene: React.FC = () => {
   const frame = useCurrentFrame();
-  const { fps } = useVideoConfig();
-
   return (
     <AbsoluteFill>
       {/* Decorative elements */}
       <div style={{ position: "absolute", top: 50, left: 120, opacity: 0.05 }}>
-        <ShapeAnimation shape="star" animation="rotate" size={200} color="#F56B3D" speed={0.1} />
+        <ShapeAnimation
+          shape="star"
+          animation="rotate"
+          size={200}
+          color="#F56B3D"
+          speed={0.1}
+        />
       </div>
-      <div style={{ position: "absolute", bottom: 50, right: 100, opacity: 0.04 }}>
-        <ShapeAnimation shape="diamond" animation="breathe" size={150} color="#10B981" speed={0.3} />
+      <div
+        style={{ position: "absolute", bottom: 50, right: 100, opacity: 0.04 }}
+      >
+        <ShapeAnimation
+          shape="diamond"
+          animation="breathe"
+          size={150}
+          color="#10B981"
+          speed={0.3}
+        />
       </div>
 
       {/* Title */}
-      <div style={{ position: "absolute", top: 120, left: 0, right: 0, display: "flex", justifyContent: "center" }}>
+      <div
+        style={{
+          position: "absolute",
+          top: 120,
+          left: 0,
+          right: 0,
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
         <TextAnimation
           startFrom={5}
           style={{
@@ -97,12 +117,17 @@ export const StatsScene: React.FC = () => {
             frame,
             [counterStartFrame, counterStartFrame + 40],
             [0, 1],
-            { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.out(Easing.cubic) }
+            {
+              extrapolateLeft: "clamp",
+              extrapolateRight: "clamp",
+              easing: Easing.out(Easing.cubic),
+            },
           );
 
-          const displayValue = stat.value === 0
-            ? "$0"
-            : `${stat.prefix || ""}${Math.round(stat.value * counterProgress).toLocaleString()}${stat.suffix || ""}`;
+          const displayValue =
+            stat.value === 0
+              ? "$0"
+              : `${stat.prefix || ""}${Math.round(stat.value * counterProgress).toLocaleString()}${stat.suffix || ""}`;
 
           return (
             <div

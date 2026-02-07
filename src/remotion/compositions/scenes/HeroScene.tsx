@@ -61,12 +61,21 @@ export const HeroScene: React.FC = () => {
   });
 
   // Floating motion for dashboard
-  const floatY = Math.sin(frame / fps * 1.2) * 4;
+  const floatY = Math.sin((frame / fps) * 1.2) * 4;
 
   return (
     <AbsoluteFill>
       {/* Badge */}
-      <div style={{ position: "absolute", top: 85, left: 0, right: 0, display: "flex", justifyContent: "center" }}>
+      <div
+        style={{
+          position: "absolute",
+          top: 85,
+          left: 0,
+          right: 0,
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
         <Badge
           badgeStyle="glass"
           color="#F56B3D"
@@ -102,7 +111,13 @@ export const HeroScene: React.FC = () => {
           transform: `scale(${logoScale})`,
         }}
       >
-        <Glow color="#F56B3D" intensity={15} pulsate pulseDuration={3} pulseMin={0.4}>
+        <Glow
+          color="#F56B3D"
+          intensity={15}
+          pulsate
+          pulseDuration={3}
+          pulseMin={0.4}
+        >
           <span
             style={{
               fontFamily: outfitFont,
@@ -129,7 +144,16 @@ export const HeroScene: React.FC = () => {
       </div>
 
       {/* Headline */}
-      <div style={{ position: "absolute", top: 255, left: 0, right: 0, display: "flex", justifyContent: "center" }}>
+      <div
+        style={{
+          position: "absolute",
+          top: 255,
+          left: 0,
+          right: 0,
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
         <TextAnimation
           startFrom={18}
           className="text-center"
@@ -161,7 +185,16 @@ export const HeroScene: React.FC = () => {
       </div>
 
       {/* Subtitle */}
-      <div style={{ position: "absolute", top: 380, left: 0, right: 0, display: "flex", justifyContent: "center" }}>
+      <div
+        style={{
+          position: "absolute",
+          top: 380,
+          left: 0,
+          right: 0,
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
         <TextAnimation
           startFrom={35}
           style={{
@@ -186,7 +219,8 @@ export const HeroScene: React.FC = () => {
             return tl;
           }}
         >
-          Create, launch, and sell digital products with AI superpowers and zero tech stress
+          Create, launch, and sell digital products with AI superpowers and zero
+          tech stress
         </TextAnimation>
       </div>
 
@@ -210,12 +244,18 @@ export const HeroScene: React.FC = () => {
             borderRadius: 16,
             overflow: "hidden",
             border: "1px solid rgba(245,107,61,0.15)",
-            boxShadow: "0 20px 60px rgba(0,0,0,0.5), 0 0 40px rgba(245,107,61,0.1)",
+            boxShadow:
+              "0 20px 60px rgba(0,0,0,0.5), 0 0 40px rgba(245,107,61,0.1)",
           }}
         >
           <Img
-            src="https://pub-e3bfc0083b0644b296a7080b21024c5f.r2.dev/superlinks/1770452705847_746plujpwo4_superlinks_dashboard.png"
-            style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top center" }}
+            src="https://pub-e3bfc0083b0644b296a7080b21024c5f.r2.dev/superlinks/1770452928545_c3mu8z3rac6_superlinks_dashboard.png"
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              objectPosition: "top center",
+            }}
           />
         </div>
       </div>
